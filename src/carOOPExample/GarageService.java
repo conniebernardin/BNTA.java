@@ -39,6 +39,18 @@ public class GarageService {
 
     }
 
+    public void removeCar (Garage garage, Car car){
+        int currentCarsInGarage = getTotalCarsInGarage(garage);
+         if (currentCarsInGarage > 0){//check that there are cars in the garage
+             for (int i =0; i < garage.getCars().length; i++){
+                 if (garage.getCars()[i] == car){
+                     garage.getCars()[i] = null;
+                     break;
+                 }
+             }
+        } else throw new IllegalStateException(garage.getGarageNumber() + "is empty. No cars to remove.");
+    }
+
     public int getTotalCarsInGarage(Garage garage) {
         int currentCarsInGarageCount = 0; //looping through array of cars
         for (Car c : garage.getCars()) {

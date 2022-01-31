@@ -34,23 +34,32 @@ public class Main {
                 2,
                 6);
 
+
+      //adding functionality with garageService class
+
         GarageService garageService = new GarageService();
 
         conniesGarage.setOpen(true);
         aidanGarage.setOpen(true);
 
-        // to add one car
+        // add one car to Aidan
         garageService.addCar(
                 aidanGarage,
                 aidan.getCars()[0]);
 
-        //add all cars
+        //add all cars to Connie
         for (Car connieCar : connie.getCars()){
             garageService.addCar(
                     conniesGarage,
                     connieCar
             );
         }
+
+        //to remove one car from index 1
+        garageService.removeCar(
+                conniesGarage,
+                connie.getCars()[1]
+        );
 
       //  System.out.println(conniesGarage);
         System.out.println("--------------------------------------");
@@ -69,6 +78,11 @@ public class Main {
         for (Car a: aidanGarage.getCars()){
             System.out.println(a);
         }
+        System.out.println("--------------------------------------");
+        System.out.println("Total number of cars in Aidan's Garage:");
+        System.out.println(garageService.getTotalCarsInGarage(aidanGarage));
+
+
 
     }
 }
