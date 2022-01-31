@@ -24,6 +24,7 @@ public class Car {
         public int getMileage(){
                 return mileage;
         }
+
         //set and get year
         public void setYear(int year){
                 this.year = year;
@@ -31,6 +32,7 @@ public class Car {
         public int getYear(){
                 return year;
         }
+
         //set and get manufacturer
         public void setManufacturer(Manufacturer manufacturer){
                 this.manufacturer = manufacturer;
@@ -38,6 +40,7 @@ public class Car {
         public Manufacturer getManufacturer(){
                 return manufacturer;
         }
+
         //set and get engine type
         public void setEngineType(String engineType){
                 this.engineType = engineType;
@@ -45,6 +48,7 @@ public class Car {
         public String getEngineType(){
                 return engineType;
         }
+
         //set and get price
         public void setPrice(int price){
                 this.price = price;
