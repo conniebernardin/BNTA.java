@@ -6,8 +6,11 @@ public class Main {
         Car honda = new Car("Honda", "BNTA 123", false);
         Car tesla = new Car("Tesla", "BNTA 1234", true);
         Car mini = new Car("Mini", "BNTA 12345", false);
+        Car Mitsubishi = new Car("Mitsubishi", "BNTA 123456", false);
+        Car Suzuki = new Car("Suzuki", "BNTA 321", true);
 
         Car[] connieCars = {honda, mini, tesla}; //naming car array and adding car into the array
+        Car [] aidanCars = {Mitsubishi, Suzuki};
 
         Person connie = new Person(
                 "Connie",
@@ -15,19 +18,31 @@ public class Main {
                 "connie@gmail.com",
                 connieCars);
 
+        Person aidan = new Person(
+                "Aidan",
+                21,
+                "Aidan@yahoo.co.uk",
+                aidanCars);
+
         Garage conniesGarage = new Garage(
                 connie,
                 1,
                 3);
 
+        Garage aidanGarage = new Garage(
+                aidan,
+                2,
+                6);
+
         GarageService garageService = new GarageService();
 
         conniesGarage.setOpen(true);
+        aidanGarage.setOpen(true);
 
-//       to add one car
-//        garageService.addCar(
-//                conniesGarage,
-//                connie.getCars()[0]);
+        // to add one car
+        garageService.addCar(
+                aidanGarage,
+                aidan.getCars()[0]);
 
         //add all cars
         for (Car connieCar : connie.getCars()){
@@ -45,8 +60,15 @@ public class Main {
         }
 
         System.out.println("--------------------------------------");
-        System.out.println("Total number of cars:");
+        System.out.println("Total number of cars in Connie's Garage:");
         System.out.println(garageService.getTotalCarsInGarage(conniesGarage));
+
+
+        System.out.println("--------------------------------------");
+        System.out.println("Cars in Aidan's Garage:");
+        for (Car a: aidanGarage.getCars()){
+            System.out.println(a);
+        }
 
     }
 }
