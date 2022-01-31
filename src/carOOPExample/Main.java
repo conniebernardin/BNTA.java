@@ -55,7 +55,7 @@ public class Main {
             );
         }
 
-        //to remove one car from index 1
+        //to remove one car from index 1 in Connie's Garage
         garageService.removeCar(
                 conniesGarage,
                 connie.getCars()[1]
