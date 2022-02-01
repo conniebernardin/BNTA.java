@@ -1,6 +1,7 @@
 package ObjectOrientedProgramming.ClassesExercises.ExerciseOne;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class CarDealership {
     private String name;
@@ -21,7 +22,6 @@ public class CarDealership {
     }
 
     //setting and getting
-
     public void setName (String name){
         this.name = name;
     }
@@ -52,6 +52,21 @@ public class CarDealership {
                 ", displaySpaces=" + displaySpaces +
                 ", inStock=" + Arrays.toString(inStock) +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CarDealership that = (CarDealership) o;
+        return displaySpaces == that.displaySpaces && Objects.equals(name, that.name) && Arrays.equals(inStock, that.inStock);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(name, displaySpaces);
+        result = 31 * result + Arrays.hashCode(inStock);
+        return result;
     }
 }
 

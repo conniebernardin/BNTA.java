@@ -11,4 +11,7 @@ public class mainCar {
         CarDealership dealership = new CarDealership("Connie's cars", 22);
         dealership.setInStock(new Car[]{honda, daihatsu, mazda});
     }
+
+    //method to count cars in CarDealership. Takes no parameters, returns an int.
 }
+

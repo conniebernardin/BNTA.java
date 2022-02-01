@@ -1,5 +1,7 @@
 package ObjectOrientedProgramming.ClassesExercises.ExerciseOne;
 
+import java.util.Objects;
+
 //new class = Car
 public class Car {
         private int year;
@@ -66,6 +68,19 @@ public class Car {
                         ", engineType='" + engineType + '\'' +
                         ", price=" + price +
                         '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+                if (this == o) return true;
+                if (o == null || getClass() != o.getClass()) return false;
+                Car car = (Car) o;
+                return year == car.year && mileage == car.mileage && Double.compare(car.price, price) == 0 && manufacturer == car.manufacturer && Objects.equals(engineType, car.engineType);
+        }
+
+        @Override
+        public int hashCode() {
+                return Objects.hash(year, manufacturer, mileage, engineType, price);
         }
 }
 
