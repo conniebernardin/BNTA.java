@@ -13,6 +13,7 @@ public class GarageService {
     //8. filter non-electric cars
     //9. clean garage
 
+    //ADD CAR FUNCTION
     public void addCar(Garage garage, Car car) {
         // check if open
             //if open check not full
@@ -39,6 +40,7 @@ public class GarageService {
 
     }
 
+    //REMOVE CAR FUNCTION
     public void removeCar (Garage garage, Car car){
         int currentCarsInGarage = getTotalCarsInGarage(garage);
          if (currentCarsInGarage > 0){//check that there are cars in the garage
@@ -51,6 +53,7 @@ public class GarageService {
         } else throw new IllegalStateException(garage.getGarageNumber() + "is empty. No cars to remove.");
     }
 
+    //METHOD FOR COUNTING CARS IN GARAGE
     public int getTotalCarsInGarage(Garage garage) {
         int currentCarsInGarageCount = 0; //looping through array of cars
         for (Car c : garage.getCars()) {
