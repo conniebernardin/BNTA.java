@@ -50,7 +50,7 @@ public class Car {
     public boolean equals(Object o) {
         if (this == o) return true; //if instances are the same then return true
         if (o == null || getClass() != o.getClass()) return false; //if instance is null or (||) isn't same class then there's non point continuing because its false
-        Car car = (Car) o; // states that the object must equal the instance in question since it has passed checks above ^^^
+        Car car = (Car) o; // states that the object must equal the instance in question since it has passed checks above ^^^ converts object o into car
         return isElectric == car.isElectric && Objects.equals(make, car.make) && Objects.equals(regNumber, car.regNumber); //checks that all fields are the same and returns true
     }
 
