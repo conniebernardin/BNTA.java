@@ -1,5 +1,7 @@
 package carOOPExample;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -34,6 +36,11 @@ public class Main {
                 2,
                 6);
 
+
+        //check whether objects are the same
+        System.out.println("-------------------------");
+        System.out.println("COMPARING CARS:  ");
+        System.out.println(honda.equals(mini));
 
       //adding functionality with garageService class
 

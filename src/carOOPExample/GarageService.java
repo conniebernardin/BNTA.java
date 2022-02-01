@@ -57,7 +57,7 @@ public class GarageService {
     public int getTotalCarsInGarage(Garage garage) {
         int currentCarsInGarageCount = 0; //looping through array of cars
         for (Car c : garage.getCars()) {
-            if (c != null){ //null means there is no car at that index in the car array
+             if (c != null){ //null means there is no car at that index in the car array
                 currentCarsInGarageCount++;  //for every null, count empty spaces.
             }
         }

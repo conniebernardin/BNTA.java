@@ -1,5 +1,7 @@
 package carOOPExample;
 
+import java.util.Objects;
+
 public class Car {
     private String make;
     private String regNumber;
@@ -42,5 +44,18 @@ public class Car {
                 ", regNumber='" + regNumber + '\'' +
                 ", isElectric=" + isElectric +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true; //if instances are the same then return true
+        if (o == null || getClass() != o.getClass()) return false; //if instance is null or isn't same class then there's non point continuing because its false
+        Car car = (Car) o;
+        return isElectric == car.isElectric && Objects.equals(make, car.make) && Objects.equals(regNumber, car.regNumber); //checks that all fields are the same and returns true
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(make, regNumber, isElectric);
     }
 }
