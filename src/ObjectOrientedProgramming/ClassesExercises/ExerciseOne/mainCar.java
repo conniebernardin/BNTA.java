@@ -12,18 +12,11 @@ public class mainCar {
         CarDealership dealershipOne = new CarDealership("Connie's cars", 22);
         dealershipOne.setInStock(new Car[]{honda, daihatsu, mazda});
 
+        //invoking method from CarCounter class
+        carCounter counter = new carCounter();
+        int carsInStock = counter.carCount(dealershipOne);
+        System.out.println(carsInStock);
     }
 
-    //method to count cars in CarDealership. Takes no parameters, returns an int.
-    public int carCount(CarDealership carDealership){
-        int carsCounted = 0;
-
-        for (Car c : carDealership.getInStock()) {
-            if (c != null){
-                carsCounted ++;
-            }
-    }
-        return carsCounted;
-}
 }
 
