@@ -12,8 +12,7 @@ public class carService {
         return carsCounted;
     }
 
-    public int addCar(CarDealership carDealership, Car car){
-
+    public void addCar(CarDealership carDealership, Car car) {
         for (int i = 0; i < carDealership.getInStock().length; i++) { //loop through array InStock from carDealership class
             if (carDealership.getInStock()[i] == null) { //if index i is equal to null, there is a space. You can then add car.
                 carDealership.getInStock()[i] = car; // car added to index point i
@@ -21,4 +20,4 @@ public class carService {
 
             }
         }
-}
+    }}
