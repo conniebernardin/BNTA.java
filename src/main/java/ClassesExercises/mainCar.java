@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming.ClassesExercises.ExerciseOne;
+package ClassesExercises;
 
 public class mainCar {
     public static void main(String[] args) {

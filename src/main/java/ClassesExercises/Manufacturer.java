@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming.ClassesExercises.ExerciseOne;
+package ClassesExercises;
 
 public enum Manufacturer {
     HONDA,

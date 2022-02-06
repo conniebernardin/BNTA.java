@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming.ClassesExercises.ExerciseOne;
+package ClassesExercises;
 
 import java.util.Objects;
 
